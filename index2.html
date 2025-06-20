@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 2</title>
+    <!-- Tailwind CSS CDN for styling -->
+     <link rel="icon" type="image/x-icon" href="./icon.gif">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md transform transition duration-500 hover:scale-105">
+        <h2 class="text-4xl font-extrabold text-center text-blue-600 mb-8">PORTAL TOÁN</h2>
+        <form id="loginForm">
+            <!-- Email Input -->
+            <div class="mb-6">
+                <label for="email" class="block text-gray-700 text-sm font-extrabold mb-2">Email</label>
+                <input type="email" id="email" name="email" placeholder=""
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                    required>
+                <!-- Error message for email validation -->
+                <div id="emailError" class="text-red-500 text-sm mt-1 hidden"></div>
+            </div>
+            <!-- Password Input -->
+            <!-- Remember Me & Forgot Password -->
+            <!-- Login Button -->
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 shadow-lg hover:shadow-xl">
+                Đăng nhập
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const users = [
+            { email: "buiminhquan@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1F2dN-FOJvPqjk9pRoQHYtR4Ug6fXcVK4j1jndiPpv5c/edit" },
+            { email: "rmdt2022@gmail.com", link: "https://docs.google.com/spreadsheets/d/1tpJknrzURetRYba_JPrJrOaEF9t6dMd6hYoMZA4Trtg/edit" },
+        ]
+
+        // Get references to the form and input fields
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        // Add an event listener for form submission
+        loginForm.addEventListener('submit', function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Validate the email address
+            const user = users.find(user => user.email === emailInput.value)
+            if (!user) {
+                // Display error message if email is invalid
+                emailError.textContent = 'Không tìm thấy Email!';
+                emailError.classList.remove('hidden'); // Make the error message visible
+            } else {
+                // Clear error message if email is valid
+                emailError.textContent = '';
+                emailError.classList.add('hidden'); // Hide the error message
+
+                // For demonstration: If validation passes, you would typically submit the form or make an API call
+                // window.open(user.link);
+                window.location.href = user.link
+                // Here you would add code to actually submit the form or make an AJAX request
+                // e.g., loginForm.submit();
+            }
+        });
+
+        /**
+         * Validates an email address using a regular expression.
+         * @param {string} email - The email address to validate.
+         * @returns {boolean} - True if the email is valid, false otherwise.
+         */
+
+        // Optional: Clear error message when user starts typing again
+        emailInput.addEventListener('input', function () {
+            if (!emailError.classList.contains('hidden')) {
+                emailError.classList.add('hidden');
+                emailError.textContent = '';
+            }
+        });
+    </script>
+</body>
+
+</html>

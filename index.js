@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   // __dirname refers to the directory where the current script (app.js) is located.
   // 'public' is the folder containing our HTML file.
   // 'index.html' is the name of the HTML file we want to send.
-  res.sendFile('index.html');
+  res.sendFile('index2.html');
 });
 
 // Start the server and listen for incoming requests on the specified port
