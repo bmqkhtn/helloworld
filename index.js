@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 // Define the port the server will listen on.
 // It uses process.env.PORT for deployment environments or defaults to 3000 for local development.
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Define a route for the root URL ('/')
 // When a GET request is made to '/', the callback function will be executed.
