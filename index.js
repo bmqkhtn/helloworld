@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 // app.use(express.static(path.join(__dirname, 'public')));
 // Define a route for the root URL ('/')
 // When a GET request is made to '/', the callback function will be executed.
-app.get('/', (req, res) => {
+app.get('/a', (req, res) => {
   // Use path.join to create an absolute path to the index.html file.
   // __dirname refers to the directory where the current script (app.js) is located.
   // 'public' is the folder containing our HTML file.
