@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <!-- Tailwind CSS CDN for styling -->
-     <link rel="icon" type="image/x-icon" href="./icon.gif">
+    <link rel="icon" type="image/x-icon" href="./icon.gif">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,8 +42,35 @@
 
     <script>
         const users = [
-            { email: "buiminhquan@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1F2dN-FOJvPqjk9pRoQHYtR4Ug6fXcVK4j1jndiPpv5c/edit" },
-            { email: "rmdt2022@gmail.com", link: "https://docs.google.com/spreadsheets/d/1tpJknrzURetRYba_JPrJrOaEF9t6dMd6hYoMZA4Trtg/edit" },
+            { email: "0301221214@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1CADkNrXz_xRMqf7pnDwvFBYu49o16QrLhFGcwWirwhY/edit" },
+            { email: "0301241101@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1EgLAVkqBmtAYFzPLb9b1dwsqYQSsj_-fHSjKxpGXbx0/edit" },
+            { email: "0301241166@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1rVoJT-jeXDawNDiQOkYLB7GMjOx8m2WcB3ePmmQ899Y/edit" },
+            { email: "0302221364@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1xP1oEAKZuKw2MH1d-u0G4w5VJqqGSe4aOhCHm-dSHI4/edit" },
+            { email: "0302221379@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/15kAuPbECM1QTx5sBfJMfjYts1N-7RRBvmyW7ShITtGE/edit" },
+            { email: "0302221434@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1c-KejzvrFTEvl9_9_5k8Osm8er6tsCak4t-Uqoe27_0/edit" },
+            { email: "0302221236@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1koJSrOXf3l58O2OF-kVOyKV3trPYe_v6Q6p-cvehCsY/edit" },
+            { email: "0302221243@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1gYW2YPQ6De7aNfJAVW6wwCutOk3vMXMkXe8TxEQ_ZxY/edit" },
+            { email: "0302241046@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1JkT02S7rf3LGgrBrwyb3RCsSmtwV0XMs5Drj7P9anAQ/edit" },
+            { email: "0302241092@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1RgYBNrIL2_XT4RLwQPrc74fn0aw1cnD4E9oNn0wMZSA/edit" },
+            { email: "0303211049@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1dkU8sv3rEayK7z1HAzLZeow2sOUARySxHrDBMQEUHic/edit" },
+            { email: "0303241215@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1dugtWFK_PC6wzzBHN17ghALlrxYRnQweqTLinv00Ctc/edit" },
+            { email: "0303241275@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1Ag9jHMAYPw-Jc_jeP9OUrw8UXimJHGz83Eind2vg4-c/edit" },
+            { email: "0303241292@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1ur6OlAFm7jMQocOL_7wU3rCKWpsYuCuvdO7l7JJx6uU/edit" },
+            { email: "0303241299@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1hMREq9rvKBe1zLaiPqZ3ytxjbDMztqv9vOHJdyHrcZQ/edit" },
+            { email: "0303241379@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1NTVdVTJQQJS9FBBoHRkFPW91GNrkQGmHaPoN3W8wQgA/edit" },
+            { email: "0303241490@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1wcu32qnJZRqq46NmPNMDwsPKtNBV2PhWi_bBcA1_71Y/edit" },
+            { email: "0304211180@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1O9y6iTlUVkzTdOYt808TLqoHbGIqv2oNCrc-_h7IWpg/edit" },
+            { email: "0304241009@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1YjhaqkSbvl0gutlx68b1n-Svyk4OEPvHOiU7vemEBlg/edit" },
+            { email: "0307241016@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1kOuZV7a9vLZh71hGiQvJ2T8LQE_SYKrEWhuk_CiAtrA/edit" },
+            { email: "0307241029@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/129dE_mflgSimy8QZpC45FmB2lwzvNkcZUDP0qMTSbZ0/edit" },
+            { email: "0307241062@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1c7G27LEsz0RkBycp-f-WieTa6ukcnkrHHbioPitFwxE/edit" },
+            { email: "0307241090@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/15KcWi21KNKDc2h5vYx-taAm9TrHn7xpmUCMh3kDJpQw/edit" },
+            { email: "0308231143@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1H0r3Cv3zuLfWdxoP8HzrvodYiGBx3JF4HMDftk68pYM/edit" },
+            { email: "0308241012@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/16zJDpUhYss0FAclLyZB51o9sCyVcJ-zP0TZTPCtkABE/edit" },
+            { email: "0308241063@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1iedmTKbMQ-oo36vEe7YP7bH4oTJUwIMZ4iGCVXyeqDk/edit" },
+            { email: "0308241140@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1vaTXq6ym7fzn66VtosZraWvgYnIeEHrTPJSKV6Lrtjg/edit" },
+            { email: "0309241005@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1LFtekPnSUlaVf4WS8-vD3O5uAbKTp26gclwWm5TPcJc/edit" },
+            { email: "0309241019@caothang.edu.vn", link: "https://docs.google.com/spreadsheets/d/1uEU_pUKcYPLUS-wgt7HPetHyjj7c1eEctUmvWbNbI50/edit" },
         ]
 
         // Get references to the form and input fields
